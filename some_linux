@@ -1,0 +1,11 @@
+grep  -r "swdb.berkeley.edu" --include=\*.{*.php,*.html,*.css,*.txt,*.csv}
+sudo find ./stagingswdb/ -type f -exec sed -i -e 's#swdb.berkeley.edu#statewidedatabase.org#g' {} \;
+
+
+find myDirectory/. -type f \( -name '*.txt' -o -name '*.read' \) -print0 | xargs -0 sed -i "$replace"
+find . -name "*.php," -exec sed -i "s/evictions/128/g" '{}' \;
+
+sudo find . -name "*.php" -type f -exec sed -i -e 's#swdb.berkeley.edu#statewidedatabase.org#g' {} \;
+
+
+sudo grep -r "statewidedatabase.org"  --include=\*.{*.php,*.html,*.bak,*.css,*.htm} ./
